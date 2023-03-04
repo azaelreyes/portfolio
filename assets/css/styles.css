@@ -96,8 +96,14 @@ button, input{
     outline: none;
 }
 /* =============== LAYOUT ===============*/
-
-
+.container{
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.grid{
+    display: grid;
+}
 /* =============== REUSABLE CSS CLASSES ===============*/
 
 /* =============== SIDEBAR ===============*/
@@ -180,9 +186,54 @@ button, input{
     margin: auto;
 
 }
+/* ==================== MAIN ==================== */
+.main{
+    margin-left: 100px;
+}
+/* ===== Home Section =====  */
+.home{
+    height: 100vh;
+    /* 
+    background: url();
+    background-size: cover;
+    background-position: center center;
+     */
+}
+.home_container{
+    position:relative;
+    height: 100%;
+    align-items: center;
+}
 
-/* ===== Home Section ===== */
+.home_social{
+    position:absolute;
+    top: 1.8rem;
+    left:0;
+    display: flex;
+    align-items: center;
+    column-gap: 3.5rem;
+}
+.home_social-follow{
+    font-weight: var(--font-medium);
+    position: relative;
+}
+.home_social-follow::after{
+    content: '';
+    position:absolute;
+    width: 1rem;
+    height:2px;
+    background-color: var(--text-color);
+    right: -45%;
+    top:50%;
+}
 
+
+.home_img{
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px; 
+    /* THIS NEEDS TO BE FIXED, IMAGE NOT SHOWING*/
+}
 /* ===== Buttons ===== */
 
 /* ===== About Section ===== */
