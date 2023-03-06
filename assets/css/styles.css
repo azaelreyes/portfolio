@@ -188,21 +188,22 @@ button, input{
 }
 /* ==================== MAIN ==================== */
 .main{
-    margin-left: 100px;
+    margin-left: 100px; 
+    /* This is to avoid the sidebar */
 }
 /* ===== Home Section =====  */
 .home{
-    height: 100vh;
-    /* 
-    background: url();
+    background: url("/assets/img/grey.png");
     background-size: cover;
     background-position: center center;
-     */
+    height: 100vh;
+    /* This sets the background of home page grey with an image. */
 }
 .home_container{
     position:relative;
     height: 100%;
     align-items: center;
+    display: grid;
 }
 
 .home_social{
@@ -229,11 +230,19 @@ button, input{
 
 
 .home_img{
-    display: flex;
-    flex-wrap: wrap;
-    width: 500px; 
+    display: absolute;
+    margin-top: 20vh;
+    margin-left: 50vw;
+    height: 60vh;
     /* THIS NEEDS TO BE FIXED, IMAGE NOT SHOWING*/
 }
+.home_img::after{
+    content: 'thfdk';
+}
+.home_social-link{
+    color:var(--text-color);
+}
+
 /* ===== Buttons ===== */
 
 /* ===== About Section ===== */
