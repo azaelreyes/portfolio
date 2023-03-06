@@ -204,6 +204,8 @@ button, input{
     height: 100%;
     align-items: center;
     display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 50px;
 }
 
 .home_social{
@@ -229,23 +231,42 @@ button, input{
 }
 
 
-.home_img{
-    display: absolute;
-    margin-top: 20vh;
-    margin-left: 50vw;
-    height: 60vh;
-    /* THIS NEEDS TO BE FIXED, IMAGE NOT SHOWING*/
-}
-.home_img::after{
-    content: 'thfdk';
-}
+
 .home_social-link{
     color:var(--text-color);
 }
 
 /* ===== Buttons ===== */
+.see-projects-link{
+    color: var(--text-color);
+    line-height: 40px;
+    padding-left: 15px;
 
+}
+.see-projects-button{
+    margin-top: 40px;
+   height: 40px;
+   width: 200px;
+   background-color: var(--skin-color);
+   border-radius: 10px;
+}
 /* ===== About Section ===== */
 
+.item1{
+    display: inline-grid;
+   
+}
 
+.item2{
+    display: inline-grid;
+}
 
+.home_img{
+    height: 60vh;
+}
+
+.my_email_info{
+    position: absolute; 
+    bottom: 1.8rem;
+    left:0;
+}
