@@ -294,7 +294,8 @@ button, input{
 
 /* <!-- ===== Work ===== --> */
 #work{
-    height: 190vh;
+    height: 260vh;
+    
 }
 
 .portfolio-text{
@@ -313,12 +314,17 @@ button, input{
     display: flex;
     margin: 10vh 5vw 20vh 5vw;
 }
+.project-grey{
+    background-image: url(/assets/img/grey.png);
+    background-size: 100vh;
+    background-repeat: repeat;
+
+}
 /* project-container = parent =project-img & project-description-right */
 .todo-img, .ttt-img{
     width: 45vw;
-    height: 60vh;
     border-radius: 5px;
-    /* box-shadow: 3px 3px 50px 3px var(--skin-color); */
+    /* box-shadow: 3px 3px 50px 3px white; */
 }
 
 .project-description-right{
