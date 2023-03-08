@@ -214,19 +214,20 @@ button, input{
     border-radius: 5px;
 }
 
-#content {position:relative}
-#content:before, #content:after {
-    position:absolute; content:' ';
+.content{position:relative}
+.content:before, .content:after {
+    position:absolute; 
+    content:' ';
     width:12vh; 
     height:12vh;
     border-color:var(--skin-color);
     border-style:solid; 
     margin-left: -5vh;
     margin-right: -5vh;
+    z-index: 0;
 }
-#content:before {top:-10vh;left:-2vw;border-width: 15px 0 0 15px}
-#content:after {top:57vh;right:-2vw;border-width: 0 15px 15px 0}
-
+.content:before {top:-10vh;left:-2vw;border-width: 15px 0 0 15px}
+.content:after {top:57vh;right:-2vw;border-width: 0 15px 15px 0}
 
 .my_email_info{
     position: absolute; 
@@ -294,8 +295,7 @@ button, input{
 
 /* <!-- ===== Work ===== --> */
 #work{
-    height: 260vh;
-    
+    height: 100%;
 }
 
 .portfolio-text{
@@ -312,13 +312,14 @@ button, input{
 
 .project-container{
     display: flex;
-    margin: 10vh 5vw 20vh 5vw;
+    margin: 10vh 5vw 20vh 3vw;
 }
 .project-grey{
     background-image: url(/assets/img/grey.png);
-    background-size: 100vh;
+    background-size: 100%;
     background-repeat: repeat;
-
+    padding-top: 5vh;
+    padding-bottom: 2vh;
 }
 /* project-container = parent =project-img & project-description-right */
 .todo-img, .ttt-img{
@@ -379,14 +380,13 @@ button, input{
 .project-description-left>h1{
     font-size: var(--biggest-font-size);
 }
-.todo-info-p-left{
-    background-image: url(/assets/img/grey.png);
-    background-size: cover;
+.todo-info-p-grey{
+    background-color: black;
     padding: 20px;
     margin-right: -70px;
     z-index: 100;
     border-radius: 5px;
-    box-shadow: 3px 3px 5px 3px rgb(27, 27, 27);
+    box-shadow: 3px 3px 5px 3px black;
 }
 .languages-left{
     display: flex;
@@ -399,4 +399,11 @@ button, input{
     padding: 7px;
     margin-left: 10px;
     margin-top: 10px;
+}
+.project-links > a{
+    background-color: var(--skin-color);
+    padding: 3px 5px 3px 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    font-size: medium;
 }
