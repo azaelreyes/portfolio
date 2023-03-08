@@ -96,14 +96,7 @@ button, input{
     outline: none;
 }
 /* =============== LAYOUT ===============*/
-.container{
-    max-width: 1250px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.grid{
-    display: grid;
-}
+
 /* =============== REUSABLE CSS CLASSES ===============*/
 
 /* =============== SIDEBAR ===============*/
@@ -200,18 +193,55 @@ button, input{
     /* This sets the background of home page grey with an image. */
 }
 .home_container{
-    position:relative;
-    height: 100%;
+    position: relative;
+    display: flex;
+    height: 100vh;
     align-items: center;
-    display: grid;
-    grid-template-columns: auto auto;
-    column-gap: 50px;
+    justify-content: center;
 }
+
+.home1{
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+.home_img_section{
+    margin-right: 8vw;
+    margin-left: 5vw;
+}
+.home_img{
+    height: 60vh;
+    width: 48.5vh;
+}
+
+#content {position:relative}
+#content:before, #content:after {
+    position:absolute; content:' ';
+    width:12vh; 
+    height:12vh;
+    border-color:var(--skin-color); /* or whatever colour */
+    border-style:solid; /* or whatever style */
+    margin-left: -5vh;
+    margin-right: -5vh;
+}
+#content:before {top:-10vh;left:-2vw;border-width: 15px 0 0 15px}
+#content:after {top:57vh;right:-2vw;border-width: 0 15px 15px 0}
+
+
+.my_email_info{
+    position: absolute; 
+    bottom: 1.8rem;
+    left:2vw;
+}
+.home_title{
+    font-size: 4rem;
+}
+
+ 
 
 .home_social{
     position:absolute;
     top: 1.8rem;
-    left:0;
+    left:2vw;
     display: flex;
     align-items: center;
     column-gap: 3.5rem;
@@ -232,41 +262,23 @@ button, input{
 
 
 
-.home_social-link{
+.home_social-link,.info_icon{
     color:var(--text-color);
+    font-size: 1.5rem;
 }
 
 /* ===== Buttons ===== */
 .see-projects-link{
     color: var(--text-color);
     line-height: 40px;
-    padding-left: 15px;
-
 }
 .see-projects-button{
-    margin-top: 40px;
+   margin-top: 40px;
    height: 40px;
    width: 200px;
    background-color: var(--skin-color);
    border-radius: 10px;
-}
-/* ===== About Section ===== */
-
-.item1{
-    display: inline-grid;
-   
+   text-align: center;
 }
 
-.item2{
-    display: inline-grid;
-}
-
-.home_img{
-    height: 60vh;
-}
-
-.my_email_info{
-    position: absolute; 
-    bottom: 1.8rem;
-    left:0;
-}
+ 
