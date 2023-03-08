@@ -1,4 +1,4 @@
-/* =============== GOOGLE FONTS ===============*/
+/* =============== GOOGLE FONTS =============== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 /* =============== VARIABLES CSS ===============*/
@@ -211,6 +211,7 @@ button, input{
 .home_img{
     height: 60vh;
     width: 48.5vh;
+    border-radius: 5px;
 }
 
 #content {position:relative}
@@ -218,8 +219,8 @@ button, input{
     position:absolute; content:' ';
     width:12vh; 
     height:12vh;
-    border-color:var(--skin-color); /* or whatever colour */
-    border-style:solid; /* or whatever style */
+    border-color:var(--skin-color);
+    border-style:solid; 
     margin-left: -5vh;
     margin-right: -5vh;
 }
@@ -231,6 +232,12 @@ button, input{
     position: absolute; 
     bottom: 1.8rem;
     left:2vw;
+    display: flex;
+    align-items: center;
+}
+
+.email2{
+    margin-left: 17px;
 }
 .home_title{
     font-size: 4rem;
@@ -262,9 +269,13 @@ button, input{
 
 
 
-.home_social-link,.info_icon{
+.home_social-link{
     color:var(--text-color);
     font-size: 1.5rem;
+}
+.info_icon{
+    font-size: 2rem;
+    color: var(--skin-color);
 }
 
 /* ===== Buttons ===== */
@@ -281,4 +292,105 @@ button, input{
    text-align: center;
 }
 
- 
+/* <!-- ===== Work ===== --> */
+#work{
+    height: 190vh;
+}
+
+.portfolio-text{
+    color: var(--skin-color);
+    font-weight: bolder;
+}
+.portfolio-title{
+    text-align: center;
+    padding-top: 10vh;
+}
+.portfolio-title > h1{
+    font-size: var(--biggest-font-size);
+}
+
+.project-container{
+    display: flex;
+    margin: 10vh 5vw 20vh 5vw;
+}
+/* project-container = parent =project-img & project-description-right */
+.todo-img, .ttt-img{
+    width: 45vw;
+    height: 60vh;
+    border-radius: 5px;
+    /* box-shadow: 3px 3px 50px 3px var(--skin-color); */
+}
+
+.project-description-right{
+    margin-top: 5px;
+    margin-left: 3vh;
+    text-align: end;
+    
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+.project-description-right>h1{
+    font-size: var(--biggest-font-size);
+
+}
+.featured-project{
+    color: var(--skin-color);
+    margin-bottom: -45px;
+}
+.languages-right{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -30px;
+}
+.languages-right > p{
+    background-color: grey;
+    border-radius: 5px;
+    padding: 7px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.todo-info-p{
+    background-image: url(/assets/img/grey.png);
+    background-size: cover;
+    padding: 20px;
+    margin-left: -70px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 3px rgb(27, 27, 27);
+}
+
+/* IMG RIGHT */
+
+.project-description-left{
+    margin-top: 5px;
+    margin-left: 3vh;
+    text-align: start;
+    
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+.project-description-left>h1{
+    font-size: var(--biggest-font-size);
+}
+.todo-info-p-left{
+    background-image: url(/assets/img/grey.png);
+    background-size: cover;
+    padding: 20px;
+    margin-right: -70px;
+    z-index: 100;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 3px rgb(27, 27, 27);
+}
+.languages-left{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -30px;
+}
+.languages-left > p{
+    background-color: grey;
+    border-radius: 5px;
+    padding: 7px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
