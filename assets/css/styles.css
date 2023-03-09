@@ -95,11 +95,9 @@ button, input{
     border:none;
     outline: none;
 }
-/* =============== LAYOUT ===============*/
 
-/* =============== REUSABLE CSS CLASSES ===============*/
 
-/* =============== SIDEBAR ===============*/
+/* =============== ⬇️SIDEBAR⬇️ ================= ⬇️SIDEBAR⬇️ ================ ⬇️SIDEBAR⬇️ ================*/
 .sidebar{
     position: fixed;
     width: 100px;
@@ -130,11 +128,8 @@ button, input{
     position: fixed;
     transform: rotate(-90deg) translateX(-100%);
     transform-origin: left top;
-
-    width: 100vh;
-}
-.menu{
     display: flex;
+    width: 100vh;
 }
 .nav_list{
     display: flex;
@@ -179,13 +174,14 @@ button, input{
     margin: auto;
 
 }
-/* ==================== MAIN ==================== */
+/* ==================== ⬇️ MAIN ⬇️  ==================== */
 .main{
     margin-left: 100px; 
     /* This is to avoid the sidebar */
 }
-/* ===== Home Section =====  */
-.home{
+
+/* ===== ⬇️ Home Section ⬇️  =====  */
+#home{
     background: url("/assets/img/grey.png");
     background-size: cover;
     background-position: center center;
@@ -294,10 +290,6 @@ button, input{
 }
 
 /* <!-- ===== Work ===== --> */
-#work{
-    height: 100%;
-}
-
 .portfolio-text{
     color: var(--skin-color);
     font-weight: bolder;
@@ -312,7 +304,7 @@ button, input{
 
 .project-container{
     display: flex;
-    margin: 20vh 7vw 20vh 7vw;
+    margin: 20vh 12vw 20vh 10vw;
 }
 .project-library-div{
     padding-top: 5vh;
@@ -424,14 +416,8 @@ button, input{
     justify-content: center;
     
 }
-.contact-subtitle{
-    color: var(--skin-color);
-    margin-bottom: 0vh;
-}
-.contact-container > h1{
-    font-size: var(--biggest-font-size);
-    margin-bottom: 1vh;
-}
+.contact-subtitle{ color: var(--skin-color);}
+.contact-container > h1{ font-size: var(--biggest-font-size);}
 
 .contact-info{
     margin-bottom: 5vh;
@@ -461,41 +447,32 @@ button, input{
 }
 
 #set-theme{
-    background-color: var(--skin-color);
-    height: 3rem;
-    width: 3rem;
-    border-radius: 5px;
-    position: fixed;
-    display: flex;
-    justify-content: center;
     right: 2vw;
     top: 5vh;
 }
-#night-mode{
-    background-color: var(--skin-color);
+#night-mode, #set-theme, #day-mode{
+    background-image: url(/assets/img/grey.png);
+    background-size: cover;
+    box-shadow: 3px 3px 5px 3px black;
     height: 3rem;
     width: 3rem;
     border-radius: 5px;
     position: fixed;
     display: flex;
     justify-content: center;
+}
+#night-mode{
     right: 2vw;
     top: 12vh;
+}
+
+#day-mode{
+    right: 2vw;
+    top: 19vh;
 }
 .theme-icon, .night-icon, .day-icon{
     color:var(--title-color);
     font-size: 2.5rem;
     line-height: 3rem;
     transform: rotate(230deg);
-}
-#day-mode{
-    background-color: var(--skin-color);
-    height: 3rem;
-    width: 3rem;
-    border-radius: 5px;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    right: 2vw;
-    top: 19vh;
 }
