@@ -312,7 +312,11 @@ button, input{
 
 .project-container{
     display: flex;
-    margin: 10vh 5vw 20vh 3vw;
+    margin: 20vh 7vw 20vh 7vw;
+}
+.project-library-div{
+    padding-top: 5vh;
+    padding-bottom: 2vh;
 }
 .project-grey{
     background-image: url(/assets/img/grey.png);
@@ -406,4 +410,92 @@ button, input{
     margin-left: 10px;
     border-radius: 5px;
     font-size: medium;
+}
+
+/* ============== Contact =============== */
+
+.contact-container{
+    height: 100vh;
+    background-image: url(/assets/img/grey.png);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.contact-subtitle{
+    color: var(--skin-color);
+    margin-bottom: 0vh;
+}
+.contact-container > h1{
+    font-size: var(--biggest-font-size);
+    margin-bottom: 1vh;
+}
+
+.contact-info{
+    margin-bottom: 5vh;
+    width: 45vw;
+    text-indent: 30px
+}
+.contact-link{
+    font-size: 2.5rem;
+    color:var(--skin-color)
+}
+
+#scroll-up{
+    background-color: var(--skin-color);
+    height: 3rem;
+    width: 3rem;
+    border-radius: 5px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    right: 2vw;
+    top: 90vh;
+}
+.scroll-up-icon{
+    color:var(--title-color);
+    font-size: 2.5rem;
+    line-height: 3rem;
+}
+
+#set-theme{
+    background-color: var(--skin-color);
+    height: 3rem;
+    width: 3rem;
+    border-radius: 5px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    right: 2vw;
+    top: 5vh;
+}
+#night-mode{
+    background-color: var(--skin-color);
+    height: 3rem;
+    width: 3rem;
+    border-radius: 5px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    right: 2vw;
+    top: 12vh;
+}
+.theme-icon, .night-icon, .day-icon{
+    color:var(--title-color);
+    font-size: 2.5rem;
+    line-height: 3rem;
+    transform: rotate(230deg);
+}
+#day-mode{
+    background-color: var(--skin-color);
+    height: 3rem;
+    width: 3rem;
+    border-radius: 5px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    right: 2vw;
+    top: 19vh;
 }
