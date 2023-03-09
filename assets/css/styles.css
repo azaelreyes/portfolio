@@ -176,7 +176,8 @@ button, input{
 }
 /* ==================== ⬇️ MAIN ⬇️  ==================== */
 .main{
-    margin-left: 100px; 
+    margin-left: 100px;
+    height: 100%;
     /* This is to avoid the sidebar */
 }
 
@@ -188,28 +189,30 @@ button, input{
     height: 100vh;
     /* This sets the background of home page grey with an image. */
 }
-.home_container{
+.home-container{
     position: relative;
     display: flex;
     height: 100vh;
     align-items: center;
     justify-content: center;
-}
 
-.home1{
+}
+.home-text-content{
     margin-left: 5vw;
     margin-right: 5vw;
+    width: 40vw;
+
 }
-.home_img_section{
+.home-img-content{
     margin-right: 8vw;
     margin-left: 5vw;
+    width: 40vw;
 }
 .home_img{
-    height: 60vh;
-    width: 48.5vh;
+    max-height: 60vh;
+    max-width: 48.5vh;
     border-radius: 5px;
 }
-
 .content{position:relative}
 .content:before, .content:after {
     position:absolute; 
@@ -225,24 +228,29 @@ button, input{
 .content:before {top:-10vh;left:-2vw;border-width: 15px 0 0 15px}
 .content:after {top:57vh;right:-2vw;border-width: 0 15px 15px 0}
 
-.my_email_info{
+.home-info{
+    position: absolute;
+    left: 5vw;
+    top:0;
+    bottom:0;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 45vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.home-info > h1 {font-size: 4rem;}
+.home-email{
     position: absolute; 
     bottom: 1.8rem;
     left:2vw;
     display: flex;
     align-items: center;
 }
-
-.email2{
-    margin-left: 17px;
-}
-.home_title{
-    font-size: 4rem;
-}
-
- 
-
-.home_social{
+.home-email-child{ margin-left: 17px;}
+.home-social{
     position:absolute;
     top: 1.8rem;
     left:2vw;
@@ -250,11 +258,11 @@ button, input{
     align-items: center;
     column-gap: 3.5rem;
 }
-.home_social-follow{
+.home-icon-follow{
     font-weight: var(--font-medium);
     position: relative;
 }
-.home_social-follow::after{
+.home-icon-follow::after{
     content: '';
     position:absolute;
     width: 1rem;
@@ -263,19 +271,15 @@ button, input{
     right: -45%;
     top:50%;
 }
-
-
-
-.home_social-link{
+.home-icon-link{
     color:var(--text-color);
     font-size: 1.5rem;
 }
-.info_icon{
+.email-icon{
     font-size: 2rem;
     color: var(--skin-color);
 }
 
-/* ===== Buttons ===== */
 .see-projects-link{
     color: var(--text-color);
     line-height: 40px;
@@ -289,7 +293,7 @@ button, input{
    text-align: center;
 }
 
-/* <!-- ===== Work ===== --> */
+/* <!-- =============== ⬇️ Work ⬇️  =============== --> */
 .portfolio-text{
     color: var(--skin-color);
     font-weight: bolder;
@@ -298,32 +302,19 @@ button, input{
     text-align: center;
     padding-top: 10vh;
 }
-.portfolio-title > h1{
-    font-size: var(--biggest-font-size);
-}
+.portfolio-title > h1{ font-size: var(--biggest-font-size);}
 
 .project-container{
     display: flex;
     margin: 20vh 12vw 20vh 10vw;
+    z-index: 100;
 }
-.project-library-div{
-    padding-top: 5vh;
-    padding-bottom: 2vh;
-}
-.project-grey{
-    background-image: url(/assets/img/grey.png);
-    background-size: 100%;
-    background-repeat: repeat;
-    padding-top: 5vh;
-    padding-bottom: 2vh;
-}
-/* project-container = parent =project-img & project-description-right */
 .todo-img, .ttt-img{
     width: 45vw;
     border-radius: 5px;
-    /* box-shadow: 3px 3px 50px 3px white; */
+    z-index: -1;
 }
-
+.ttt-info-box{z-index: 10;}
 .project-description-right{
     margin-top: 5px;
     margin-left: 3vh;
@@ -333,25 +324,18 @@ button, input{
     flex-direction:column;
     justify-content: space-between;
 }
-.project-description-right>h1{
-    font-size: var(--biggest-font-size);
-
-}
-.featured-project{
-    color: var(--skin-color);
-    margin-bottom: -45px;
-}
+.project-description-right>h1{font-size: var(--biggest-font-size);}
+.featured-project{color: var(--skin-color);}
 .languages-right{
     display: flex;
     justify-content: flex-end;
-    margin-top: -30px;
+    margin-top: 10px;
 }
 .languages-right > p{
     background-color: grey;
     border-radius: 5px;
     padding: 7px;
     margin-left: 10px;
-    margin-top: 10px;
 }
 .todo-info-p{
     background-image: url(/assets/img/grey.png);
@@ -361,9 +345,6 @@ button, input{
     border-radius: 5px;
     box-shadow: 3px 3px 5px 3px rgb(27, 27, 27);
 }
-
-/* IMG RIGHT */
-
 .project-description-left{
     margin-top: 5px;
     margin-left: 3vh;
@@ -373,28 +354,28 @@ button, input{
     flex-direction:column;
     justify-content: space-between;
 }
-.project-description-left>h1{
+.project-title{
     font-size: var(--biggest-font-size);
 }
-.todo-info-p-grey{
-    background-color: black;
+.ttt-info-box-grey{
+    background-image: url(/assets/img/grey.png);
     padding: 20px;
     margin-right: -70px;
     z-index: 100;
     border-radius: 5px;
     box-shadow: 3px 3px 5px 3px black;
+    z-index: 100;
 }
 .languages-left{
     display: flex;
     justify-content: flex-start;
-    margin-top: -30px;
+    margin-top: 15px;
 }
 .languages-left > p{
     background-color: grey;
     border-radius: 5px;
     padding: 7px;
-    margin-left: 10px;
-    margin-top: 10px;
+    margin-right: 10px;
 }
 .project-links > a{
     background-color: var(--skin-color);
@@ -402,6 +383,11 @@ button, input{
     margin-left: 10px;
     border-radius: 5px;
     font-size: medium;
+}
+
+.project-icon-link{
+    color:var(--text-color);
+    font-size: 1.5rem;
 }
 
 /* ============== Contact =============== */
@@ -414,13 +400,12 @@ button, input{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
 }
+
 .contact-subtitle{ color: var(--skin-color);}
-.contact-container > h1{ font-size: var(--biggest-font-size);}
+.contact-title{ font-size: var(--biggest-font-size);}
 
 .contact-info{
-    margin-bottom: 5vh;
     width: 45vw;
     text-indent: 30px
 }
@@ -428,7 +413,7 @@ button, input{
     font-size: 2.5rem;
     color:var(--skin-color)
 }
-
+/* ================= ABSOLUTE ITEMS======================================= */
 #scroll-up{
     background-color: var(--skin-color);
     height: 3rem;

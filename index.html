@@ -9,6 +9,7 @@
     <script src="assets/js/main.js" defer></script>
     <title>Portfolio Website</title>
   </head>
+
   <body>
     <!-- ================= ⬇️ SIDEBAR ⬇️ ================= -->
     <aside class="sidebar" id="sidebar">
@@ -51,57 +52,72 @@
     <main class="main">
 
       <!-- ===== Home ===== -->
-      <section class="home">
+      <section id="home">
 
-        <div class="home_container">
+        <div class="home-container">
 
-          <div class="home1">
+          <!--home-text-content-->
+          <div class="home-text-content"> 
             
-            <div class="home_social">
-              <span class="home_social-follow">Follow Me</span>
-              <div class="home_social-links">
-                <a href="https://github.com/azaelreyes" target="_blank" class="home_social-link">
+            <div class="home-social">
+
+              <!-- "Follow Me" Text -->
+              <span class="home-icon-follow">Follow Me</span>
+
+              <div class="home-icon-links">
+
+                <!-- Github Icon link -->
+                <a href="https://github.com/azaelreyes" target="_blank" class="home-icon-link">
                   <i class="uil uil-github"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/azaelrm/" target="_blank" class="home_social-link">
+                <!-- LinkedIn Icon Link -->
+                <a href="https://www.linkedin.com/in/azaelrm/" target="_blank" class="home-icon-link">
                   <i class="uil uil-linkedin"></i>
                 </a>
-              </div>
-            </div>
 
-            <div class="home_data">
+              </div> <!--home-icon-links close-->
+
+            </div><!--home-social close-->
+
+            <div class="home-info">
+              
               <p >Hi, my name is</p>
-              <h1 class="home_title">Azael Reyes-Morales</h1>
-              <p class="home_description"> I'm a web developer experienced in HTML, CSS, JavaScript, 
+              <h1>Azael Reyes-Morales</h1>
+              <p> I'm a web developer experienced in HTML, CSS, JavaScript, 
                 Webpack, GitHub and API's. This portfolio showcases several interactive and responsive 
                 web applications. Apart from coding, I enjoy playing soccer, weightlifting, and running.
               </p>
   
               <div class="see-projects-button">
-                <a href="#about" class="button see-projects-link"><i class="uil uil-folder-open home_social-link"></i>  See my projects.
+                <a href="#about" class="button see-projects-link">
+                  <i class="uil uil-folder-open home-icon-link"></i>  See my projects.
                 </a>
               </div>
   
-            </div>
+            </div><!--home-info close-->
 
-            <div class="my_email_info">
-              <i class="uil uil-envelopes info_icon"></i>
-              <div class="email2">
-                <h3 class="info_title">Email</h3>
-                <span class="info_subtitle">azaelreyes20.ar@gmail.com</span>
+            <div class="home-email">
+
+              <i class="uil uil-envelopes email-icon"></i>
+
+              <div class="home-email-child">
+
+                <h3>Email</h3>
+                <span>azaelreyes20.ar@gmail.com</span>
+
               </div>
               
-            </div>
+            </div><!--home-email close-->
 
-          </div>
+          </div> <!--home-text-content end-->
 
-          <div class="home_img_section">
+          <!--home-img-content-->
+          <div class="home-image-content"> 
 
             <div class="content"></div>
             <img  src="/assets/img/azael.png" alt="" class="home_img">
             
-
-          </div>
+          </div> <!--home-image-content end-->
 
           
         </div>
@@ -132,10 +148,10 @@
           </div>
 
           <div class="project-links">
-            <a href="https://github.com/azaelreyes/to-do" target="_blank" class="home_social-link">
+            <a href="https://github.com/azaelreyes/to-do" target="_blank" class="project-icon-link">
               <i class="uil uil-github"></i> Code
             </a>
-            <a href="https://azaelreyes.github.io/to-do/" target="_blank" class="home_social-link">
+            <a href="https://azaelreyes.github.io/to-do/" target="_blank" class="project-icon-link">
               <i class="uil uil-external-link-alt"></i> Preview
             </a>
 
@@ -143,14 +159,16 @@
         </div>
       </div>
 
-      <div class="project-grey"> <!-- Tic Tac Toe -->
+      <div class="project-container"><!-- Tic Tac Toe-->
+        <div class="project-description-left">
 
-        <div class="project-container">
-          <div class="project-description-left">
+          <div>
             <p class="featured-project">Featured Project</p>
-            <h1>Tic-Tac-Toe</h1>
+            <h1 class="project-title">Tic-Tac-Toe</h1>
+          </div>
           
-            <p class="todo-info-p-grey">A Tic-Tac-Toe Game with vanilla JavaScript, HTML, & CSS. In this web app, you can two players can play one another,
+          <div class="ttt-info-box">
+            <p class="ttt-info-box-grey">A Tic-Tac-Toe Game with vanilla JavaScript, HTML, & CSS. In this web app, you can two players can play one another,
               each player can use a custom name, the game keeps track of the wins and draws of each player.
             </p>
             <div class="languages-left">
@@ -158,66 +176,72 @@
               <p><i class="uil uil-html5"></i> HTML</p>
               <p><i class="uil uil-css3-simple"></i> CSS</p>
             </div>
-  
-            <div class="project-links">
-              <a href="https://github.com/azaelreyes/to-do" target="_blank" class="home_social-link">
-                <i class="uil uil-github"></i> Code
-              </a>
-              <a href="https://azaelreyes.github.io/to-do/" target="_blank" class="home_social-link">
-                <i class="uil uil-external-link-alt"></i> Preview
-              </a>
-  
-            </div>
           </div>
+          
 
-          <div class="project-img">
+          <div class="project-links">
+            <a href="https://github.com/azaelreyes/to-do" target="_blank" class="project-icon-link">
+              <i class="uil uil-github"></i> Code
+            </a>
+            <a href="https://azaelreyes.github.io/to-do/" target="_blank" class="project-icon-link">
+              <i class="uil uil-external-link-alt"></i> Preview
+            </a>
 
-            <img class="ttt-img"src="/assets/img/ttt.png">
           </div>
         </div>
+
+        <div class="project-img">
+          <img class="ttt-img"src="/assets/img/ttt.png">
+        </div>
+
       </div>
 
-      <div class="project-library-div"> <!-- Library -->
+      <div class="project-container"><!-- Library -->
 
-        <div class="project-container">
+        <div class="project-img">
+          <img class="todo-img"src="/assets/img/lib.png">
+        </div>
 
-          <div class="project-img">
-            <img class="todo-img"src="/assets/img/lib.png">
-          </div>
-
-          <div class="project-description-right">
+        <div class="project-description-right">
+          <div>
             <p class="featured-project">Featured Project</p>
-            <h1>Library App</h1>
+            <h1 class="project-title">Library App</h1>
+          </div>
+          
+          <div>
             <p class="todo-info-p">Allows user to store books in a library. The user can store book data such as the title, 
-               author, pages, and whether or not the user has read it yet. Once a book is created the user can remove books 
-               and toggle the "read" option.
+              author, pages, and whether or not the user has read it yet. Once a book is created the user can remove books 
+              and toggle the "read" option.
             </p>
             <div class="languages-right">
               <p><i class="uil uil-java-script"></i> JavaScript</p>
               <p><i class="uil uil-html5"></i> HTML</p>
               <p><i class="uil uil-css3-simple"></i> CSS</p>
             </div>
-
-            <div class="project-links">
-              <a href="https://azaelreyes.github.io/library-app2/" target="_blank" class="home_social-link">
-                <i class="uil uil-github"></i> Code
-              </a>
-              <a href="https://github.com/azaelreyes/library-app2" target="_blank" class="home_social-link">
-                <i class="uil uil-external-link-alt"></i> Preview
-              </a>
-
-            </div>
           </div>
 
+          <div class="project-links">
+            <a href="https://azaelreyes.github.io/library-app2/" target="_blank" class="project-icon-link">
+              <i class="uil uil-github"></i> Code
+            </a>
+            <a href="https://github.com/azaelreyes/library-app2" target="_blank" class="project-icon-link">
+              <i class="uil uil-external-link-alt"></i> Preview
+            </a>
+
+          </div>
         </div>
+
       </div>
+    
       
       <!-- ===== Contact ===== -->
       <section class="contact-container">
 
         <!--Contact Content-->
         <p class="contact-subtitle">What's Next?</p>
-        <h1>Get In Touch</h1>
+        <h1 class="contact-title">Get In Touch</h1>
+        
+        
         <p class="contact-info">
           Contact me directly by email at: <b>azaelreyes20.ar@gmail.com</b>, or follow me on linkedin or Github.
           I am currently looking for new opportunities, my inbox is always open, I look forward to hearing from you.
