@@ -13,14 +13,12 @@
     --text-color:hsl(var(--hue-color), 8%, 85%);
     --body-color:hsl(var(--hue-color), 19%, 5%);
     --box-color:hsl(var(--hue-color), 14%, 10%);
-    --scroll-bar-color:hsl(var(--hue-color), 12%, 38%);
-    --scroll-thumb-color:hsl(var(--hue-color), 12%, 26%);
+    
 
     /* ====== Font and Typography ====== */
      --body-font: 'Poppins' , sans-serif;
 
     /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px... */
-
     --biggest-font-size: 3rem;
     --h1-font-size: 2.25rem;
     --h2-font-size: 1.5rem;
@@ -31,21 +29,8 @@
     /* ====== Font Weight ====== */
     --font-medium:500;
     --font-bold:600;
-    /* ====== Margins Bottom ====== */
-    --mb-0-25: .25rem;
-    --mb-0-5: .5rem;
-    --mb-0-75: .75rem;
-    --mb-1: 1rem;
-    --mb-1-5: 1.5rem;
-    --mb-2: 2rem;
-    --mb-2-5: 2.5rem;
-    --mb-3: 3rem;
-    /* ====== Z Index ====== */
-
-    --z-fixed:10;
-    --z-modal:100;
 }
-/* Responsive Typography */
+/* Responsive Typography  WILL PROBABLY DELETE LATER*/
 @media screen and (max-width:1024px){
     :root{
         --biggest-font-size: 2rem;
@@ -103,8 +88,8 @@ button, input{
     width: 100px;
     height: 100vh;
     background-color: var(--body-color);
-    border-right: 1px solid var(--box-color);
 }
+
 .nav_logo{
     position: absolute;
     left: 0;
@@ -124,20 +109,20 @@ button, input{
     line-height: 40px;
 }
 
-.nav_menu{
+.nav-menu{
     position: fixed;
     transform: rotate(-90deg) translateX(-100%);
     transform-origin: left top;
     display: flex;
     width: 100vh;
 }
-.nav_list{
+.nav-list{
     display: flex;
     flex-direction: row-reverse;
     margin: -2px auto 0 auto;
     transition: .4s;
 }
-.nav_link{
+.nav-link{
     float: right;
     height: 100%;
     line-height: 100px;
@@ -146,7 +131,7 @@ button, input{
     font-weight: var(--font-medium);
     position: relative;
 }
-.btn_share{
+.btn-share{
     position: absolute;
     bottom: 1.8rem;
     left:0;
@@ -154,14 +139,15 @@ button, input{
     text-align: center;
 }
 
-.social_share{
+.social-share{
     font-size: 1.5rem;
 }
 
-.nav_link.active-link, .nav_link:hover{
+.active-link, .nav-link:hover{
     color: var(--skin-color);
+    transform: scale(1.1);
 }
-.nav_link.active-link::after, .nav_link:hover::after{
+.active-link::after, .nav-link:hover::after{
     position: absolute;
     content: '';
     width: 6px;
@@ -209,7 +195,7 @@ button, input{
     width: 40vw;
 }
 .home_img{
-    max-height: 60vh;
+    height: 55vh;
     max-width: 48.5vh;
     border-radius: 5px;
 }
@@ -225,8 +211,8 @@ button, input{
     margin-right: -5vh;
     z-index: 0;
 }
-.content:before {top:-10vh;left:-2vw;border-width: 15px 0 0 15px}
-.content:after {top:57vh;right:-2vw;border-width: 0 15px 15px 0}
+.content:before {top:-7vh;left:-1vw;border-width: 15px 0 0 15px}
+.content:after {top:49vh;right:-1vw;border-width: 0 15px 15px 0}
 
 .home-info{
     position: absolute;
@@ -301,6 +287,7 @@ button, input{
 .portfolio-title{
     text-align: center;
     padding-top: 10vh;
+    margin-bottom: -6vh;
 }
 .portfolio-title > h1{ font-size: var(--biggest-font-size);}
 
@@ -400,14 +387,23 @@ button, input{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 0;
+
 }
 
-.contact-subtitle{ color: var(--skin-color);}
-.contact-title{ font-size: var(--biggest-font-size);}
+.contact-subtitle{ 
+    color: var(--skin-color);
+}
+
+.contact-title{
+    font-size: var(--biggest-font-size);
+    padding-bottom: 7vh;
+}
 
 .contact-info{
     width: 45vw;
-    text-indent: 30px
+    text-indent: 30px;
+    padding-bottom: 10vh;
 }
 .contact-link{
     font-size: 2.5rem;
@@ -424,17 +420,18 @@ button, input{
     justify-content: center;
     right: 2vw;
     top: 90vh;
+    transition: opacity .5s;
 }
 .scroll-up-icon{
     color:var(--title-color);
     font-size: 2.5rem;
     line-height: 3rem;
 }
-
-#set-theme{
-    right: 2vw;
-    top: 5vh;
+#scroll-up:hover{
+    transform: scale(1.1);
 }
+
+
 #night-mode, #set-theme, #day-mode{
     background-image: url(/assets/img/grey.png);
     background-size: cover;
@@ -446,11 +443,15 @@ button, input{
     display: flex;
     justify-content: center;
 }
+
+#set-theme{
+    right: 2vw;
+    top: 5vh;
+}
 #night-mode{
     right: 2vw;
     top: 12vh;
 }
-
 #day-mode{
     right: 2vw;
     top: 19vh;
@@ -460,4 +461,8 @@ button, input{
     font-size: 2.5rem;
     line-height: 3rem;
     transform: rotate(230deg);
+}
+
+.hidden{
+    opacity: 0%;
 }
