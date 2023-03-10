@@ -23,51 +23,83 @@
     
 }
 /* ========== ⬇️ SCREEN 420PX OR LESS ⬇️ ====== ⬇️ SCREEN 420PX OR LESS ⬇️ ==========*/
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 800px) {
     /*when screen is 400px or less */
     :root{
     --biggest-font-size: 2rem;
-    
+        margin-left: 0px;
     }
     
-    .nav{
-        visibility: hidden;
+    .sidebar{
+        display:none;
     }
+
     .main{
         margin-left: 0px;
-
     }
     #home{
         background-color: var(--grey-background);
         height: 1400px;
+        margin-left: -100px;
+
     }
     .home-container{
+        margin-left: -100px;
         position: relative;
         display: flex;
-        flex-direction: column;
         flex-wrap: wrap;
         height: 100%;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
     .home-text-content{
-        margin-left: 5vw;
-        margin-right: 5vw;
+
         width: 350px;
-    
+        height: 200px;
     }
+    
 
     .home-img{
         height: 200px;
     }
+    
     .home-img-content{
         margin-right: 20px;
         margin-left: 20px;
         width: 350px;
         height: 200px;
     }
-    
+    .project-container{
+        flex-wrap: wrap;
+        margin-left: -100px;
+
+    }
+    .todo-img, .ttt-img{
+        width: 95vw;
+    }
+    /* CONTACT */
+    .contact-container{
+        margin-left: -100px;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact-info{
+        width: 90vw;
+        text-indent: 10px;
+        padding-bottom: 10vh;
+    }
+    .contact-link{
+        font-size: 2.5rem;
+        margin-bottom: 20vh;
+
+
+    }
   } 
+
 
 /* =============== BASE ===============*/
 *{
@@ -192,27 +224,26 @@ button, input{
 .home-container{
     position: relative;
     display: flex;
-    height: 100vh;
     align-items: center;
-    justify-content: center;
-
+    justify-content: space-around;
+    height: 100vh;
 }
 .home-text-content{
-    margin-left: 5vw;
-    margin-right: 5vw;
-    width: 40vw;
-
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
 }
 .home-img-content{
-    margin-right: 8vw;
-    margin-left: 5vw;
-    width: 40vw;
+    width: 45vw;
 }
 .home-img{
-    height: 55vh;
+    max-height: 55vh;
     max-width: 48.5vh;
     border-radius: 5px;
 }
+
 .content{position:relative}
 .content:before, .content:after {
     position:absolute; 
@@ -229,12 +260,6 @@ button, input{
 .content:after {top:49vh;right:-1vw;border-width: 0 15px 15px 0}
 
 .home-info{
-    position: absolute;
-    left: 5vw;
-    top:0;
-    bottom:0;
-    margin-top: auto;
-    margin-bottom: auto;
     height: 45vh;
     width: 50vw;
     display: flex;
@@ -243,20 +268,17 @@ button, input{
 }
 .home-info > h1 {font-size: 4rem;}
 .home-email{
-    position: absolute; 
-    bottom: 1.8rem;
-    left:2vw;
     display: flex;
     align-items: center;
+    width: 100%;
+
 }
 .home-email-child{ margin-left: 17px;}
 .home-social{
-    position:absolute;
-    top: 1.8rem;
-    left:2vw;
     display: flex;
     align-items: center;
     column-gap: 3.5rem;
+    width: 100%;
 }
 .home-icon-follow{
     font-weight: var(--font-medium);
@@ -310,8 +332,11 @@ button, input{
     margin: 20vh 12vw 20vh 10vw;
     z-index: 100;
 }
+.project-img{
+    width: 100%;
+}
 .todo-img, .ttt-img{
-    width: 45vw;
+    max-width:45vw;
     border-radius: 5px;
     z-index: -1;
 }
@@ -399,13 +424,12 @@ button, input{
 .contact-container{
     height: 100vh;
     background-color: var(--grey-background);
-
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 0;
-
+    margin-bottom: 0px;
 }
 
 .contact-subtitle{ 
