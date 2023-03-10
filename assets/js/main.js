@@ -53,6 +53,33 @@ setTheme.addEventListener("click",()=>{
    
 });
 
+const redTheme = document.getElementById("red-theme");
+const greenTheme = document.getElementById("green-theme");
+const cyanTheme = document.getElementById("cyan-theme");
+const blueTheme = document.getElementById("blue-theme");
+const orangeTheme = document.getElementById("orange-theme");
+
+redTheme.addEventListener("click",()=>{
+    root.style.setProperty('--skin-color', "hsl(342, 92%, 46%)");
+})
+greenTheme.addEventListener("click",()=>{
+    root.style.setProperty('--skin-color', "hsl(72, 81%, 43%)");
+})
+cyanTheme.addEventListener("click",()=>{
+    root.style.setProperty('--skin-color', "rgb(0, 157, 171)");
+})
+blueTheme.addEventListener("click",()=>{
+    root.style.setProperty('--skin-color', "rgb(0, 60, 199)");
+})
+orangeTheme.addEventListener("click",()=>{
+    root.style.setProperty('--skin-color', "rgb(229, 95, 23)");
+})
+
+
+
+
+
+
 let root = document.documentElement;
 
 
