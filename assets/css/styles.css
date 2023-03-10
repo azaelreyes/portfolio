@@ -5,8 +5,7 @@
 
 :root{
     /* ====== Colors ====== */
-    --hue-color:242;
-    --grey-background: rgb(42, 38, 38);
+    transition: all .75s ease;
     /* HSL Color Mode */
     --skin-color: hsl(342, 92%, 46%);
     /* --skin-color: hsl(72, 81%, 43%); */
@@ -14,11 +13,10 @@
     /* --skin-color:rgb(0, 60, 199); */
     /* --skin-color:rgb(229, 95, 23); */
 
-    --title-color:hsl(var(--hue-color), 8%, 95%);
-    /* --text-color:hsl(var(--hue-color), 8%, 85%); */
+    --grey-background: rgb(42, 38, 38);
+    --title-color:white;
     --text-color: white;
-    --body-color:hsl(var(--hue-color), 19%, 5%);
-    --box-color:hsl(var(--hue-color), 14%, 10%);
+    --body-color:black;
     
 
     /* ====== Font and Typography ====== */
@@ -442,7 +440,7 @@ button, input{
 
 #night-mode, #set-theme, #day-mode{
     background-color: var(--grey-background);
-
+    transition: all .75s ease;
     box-shadow: 3px 3px 5px 3px black;
     height: 3rem;
     width: 3rem;
@@ -486,23 +484,22 @@ button, input{
     right: 2vw;
     top: 5vh;
 }
+
 #set-theme:hover{
     transform: scale(1.1) ;
 
 }
-#night-mode{
+#night-mode, #day-mode{
     right: 2vw;
     top: 12vh;
+    
 }
-#day-mode{
-    right: 2vw;
-    top: 19vh;
-}
+
 .theme-icon, .night-icon, .day-icon{
     color:var(--title-color);
     font-size: 2.5rem;
     line-height: 3rem;
-    transform: rotate(230deg);
+    transform: rotate(40deg);
 }
 
 .hidden{

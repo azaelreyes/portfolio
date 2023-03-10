@@ -44,15 +44,46 @@ setTheme.addEventListener("click",()=>{
     if(themeColors.classList.contains("hidden")){
         themeColors.classList.remove("hidden");
         setTheme.style.backgroundColor = "var(--skin-color)";
+        setTheme.style.transform = "rotate(90deg)"
     } else{
         themeColors.classList.add("hidden");
         setTheme.style.backgroundColor = "var(--grey-background)";
+        setTheme.style.transform = "rotate(0deg)"
     }
-    // setTimeout(() => {
-    //     setTheme.style.backgroundColor = "red";
-    //   }, "1 second");
+   
 });
 
-// setTheme.addEventListener("click", ()=>{
-    
-// });
+let root = document.documentElement;
+
+
+let nightModeCheck = true;
+const dayModeBtn = document.getElementById("day-mode");
+const nightModeBtn = document.getElementById("night-mode");
+
+function toggleThemeMode(){
+    if(nightModeCheck){
+        nightModeCheck = false
+        nightModeBtn.classList.remove("hidden");
+        dayModeBtn.classList.add("hidden");
+        root.style.setProperty('--body-color', "white");
+        root.style.setProperty('--grey-background', "rgb(206 206 206)");
+        root.style.setProperty('--title-color', "black");
+        root.style.setProperty('--text-color', "black");
+    } else{
+        nightModeCheck = true;
+        nightModeBtn.classList.add("hidden");
+        dayModeBtn.classList.remove("hidden");
+        //make day-mode changes
+        //grey dark background add filter to make lighter color
+        //text colors to black
+        root.style.setProperty('--body-color', "black");
+        root.style.setProperty('--grey-background', "rgb(42, 38, 38)");
+        root.style.setProperty('--title-color', "white");
+        root.style.setProperty('--text-color', "white");
+
+    }
+}
+dayModeBtn.addEventListener("click", toggleThemeMode);
+nightModeBtn.addEventListener("click", toggleThemeMode);
+
+
