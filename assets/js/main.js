@@ -11,7 +11,7 @@ const sections = document.querySelectorAll("section");
 const navLi = document.querySelectorAll(".nav-item");
 
 document.addEventListener("scroll", () =>{
-    //shows and hides scroll up button, also toggles homesidebarbtn active link class
+    //shows and hides scroll up button, also toggles home sidebar btn active link class
     if(document.documentElement.scrollTop < 500 ){
         homeSidebarBtn.classList.add("active-link")
         projectsSidebarBtn.classList.remove("active-link")
@@ -37,3 +37,22 @@ document.addEventListener("scroll", () =>{
     
 })
 
+const setTheme = document.getElementById("set-theme");
+const themeColors = document.getElementById("theme-colors");
+setTheme.addEventListener("click",()=>{
+
+    if(themeColors.classList.contains("hidden")){
+        themeColors.classList.remove("hidden");
+        setTheme.style.backgroundColor = "var(--skin-color)";
+    } else{
+        themeColors.classList.add("hidden");
+        setTheme.style.backgroundColor = "var(--grey-background)";
+    }
+    // setTimeout(() => {
+    //     setTheme.style.backgroundColor = "red";
+    //   }, "1 second");
+});
+
+// setTheme.addEventListener("click", ()=>{
+    
+// });

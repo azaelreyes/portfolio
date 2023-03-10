@@ -6,11 +6,17 @@
 :root{
     /* ====== Colors ====== */
     --hue-color:242;
-
+    --grey-background: rgb(42, 38, 38);
     /* HSL Color Mode */
     --skin-color: hsl(342, 92%, 46%);
+    /* --skin-color: hsl(72, 81%, 43%); */
+    /* --skin-color:rgb(0, 157, 171); */
+    /* --skin-color:rgb(0, 60, 199); */
+    /* --skin-color:rgb(229, 95, 23); */
+
     --title-color:hsl(var(--hue-color), 8%, 95%);
-    --text-color:hsl(var(--hue-color), 8%, 85%);
+    /* --text-color:hsl(var(--hue-color), 8%, 85%); */
+    --text-color: white;
     --body-color:hsl(var(--hue-color), 19%, 5%);
     --box-color:hsl(var(--hue-color), 14%, 10%);
     
@@ -169,9 +175,7 @@ button, input{
 
 /* ===== ⬇️ Home Section ⬇️  =====  */
 #home{
-    background: url("/assets/img/grey.png");
-    background-size: cover;
-    background-position: center center;
+    background-color: var(--grey-background);
     height: 100vh;
     /* This sets the background of home page grey with an image. */
 }
@@ -319,14 +323,14 @@ button, input{
     margin-top: 10px;
 }
 .languages-right > p{
-    background-color: grey;
+    background-color: var(--grey-background) ;
+    filter: invert(.2) ;
     border-radius: 5px;
     padding: 7px;
     margin-left: 10px;
 }
 .todo-info-p{
-    background-image: url(/assets/img/grey.png);
-    background-size: cover;
+    background-color: var(--grey-background);
     padding: 20px;
     margin-left: -70px;
     border-radius: 5px;
@@ -345,7 +349,7 @@ button, input{
     font-size: var(--biggest-font-size);
 }
 .ttt-info-box-grey{
-    background-image: url(/assets/img/grey.png);
+    background-color: var(--grey-background);
     padding: 20px;
     margin-right: -70px;
     z-index: 100;
@@ -357,9 +361,12 @@ button, input{
     display: flex;
     justify-content: flex-start;
     margin-top: 15px;
+
 }
 .languages-left > p{
-    background-color: grey;
+    background-color: var(--grey-background);
+    filter: invert(.2) ;
+
     border-radius: 5px;
     padding: 7px;
     margin-right: 10px;
@@ -381,8 +388,8 @@ button, input{
 
 .contact-container{
     height: 100vh;
-    background-image: url(/assets/img/grey.png);
-    background-size: cover;
+    background-color: var(--grey-background);
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -421,6 +428,7 @@ button, input{
     right: 2vw;
     top: 90vh;
     transition: opacity .5s;
+   
 }
 .scroll-up-icon{
     color:var(--title-color);
@@ -433,8 +441,8 @@ button, input{
 
 
 #night-mode, #set-theme, #day-mode{
-    background-image: url(/assets/img/grey.png);
-    background-size: cover;
+    background-color: var(--grey-background);
+
     box-shadow: 3px 3px 5px 3px black;
     height: 3rem;
     width: 3rem;
@@ -443,10 +451,44 @@ button, input{
     display: flex;
     justify-content: center;
 }
+.theme-colors{
+    background-color: var(--grey-background);
+
+    box-shadow: 3px 3px 5px 3px black;
+    height: 3rem;
+    width: 12rem;
+    border-radius: 5px;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    right: 6vw;
+    top: 5vh;
+    transition: opacity .5s;
+
+}
+
+.theme-color{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100px;
+}
+.theme-color:hover{transform: scale(1.1)}
+.red-theme{ background-color:  hsl(342, 92%, 46%);}
+.green-theme{ background-color: hsl(72, 81%, 43%);}
+.cyan-theme{ background-color: rgb(0, 157, 171);}
+.blue-theme{ background-color: rgb(0, 60, 199);}
+.orange-theme{ background-color:rgb(229, 95, 23);}
+
 
 #set-theme{
     right: 2vw;
     top: 5vh;
+}
+#set-theme:hover{
+    transform: scale(1.1) ;
+
 }
 #night-mode{
     right: 2vw;
@@ -465,4 +507,6 @@ button, input{
 
 .hidden{
     opacity: 0%;
+    transform: translateX(0) rotate(0deg);  
+
 }
