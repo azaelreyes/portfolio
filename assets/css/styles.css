@@ -5,64 +5,77 @@
 
 :root{
     /* ====== Colors ====== */
-    transition: all .75s ease;
-    /* HSL Color Mode */
+    
     --skin-color: hsl(342, 92%, 46%);
-    /* --skin-color: hsl(72, 81%, 43%); */
-    /* --skin-color:rgb(0, 157, 171); */
-    /* --skin-color:rgb(0, 60, 199); */
-    /* --skin-color:rgb(229, 95, 23); */
-
     --grey-background: rgb(42, 38, 38);
     --title-color:white;
     --text-color: white;
     --body-color:black;
+
+    /* --skin-color:hsl(72, 81%, 43%); */
+    /* --skin-color:rgb(0, 157, 171); */
+    /* --skin-color:rgb(0, 60, 199); */
+    /* --skin-color:rgb(229, 95, 23); */
     
-
-    /* ====== Font and Typography ====== */
-     --body-font: 'Poppins' , sans-serif;
-
-    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px... */
     --biggest-font-size: 3rem;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
-    /* ====== Font Weight ====== */
-    --font-medium:500;
-    --font-bold:600;
+    transition: all .75s ease;
+
+    
 }
-/* Responsive Typography  WILL PROBABLY DELETE LATER*/
-@media screen and (max-width:1024px){
+/* ========== ⬇️ SCREEN 420PX OR LESS ⬇️ ====== ⬇️ SCREEN 420PX OR LESS ⬇️ ==========*/
+@media screen and (max-width: 420px) {
+    /*when screen is 400px or less */
     :root{
-        --biggest-font-size: 2rem;
-        --h1-font-size: 1.5rem;
-        --h2-font-size: 1.25rem;
-        --h3-font-size: 1.125rem;
-        --normal-font-size: .938rem;
-        --small-font-size: .813rem;
-        --smaller-font-size: .75rem;
+    --biggest-font-size: 2rem;
+    
     }
-}
+    
+    .nav{
+        visibility: hidden;
+    }
+    .main{
+        margin-left: 0px;
+
+    }
+    #home{
+        background-color: var(--grey-background);
+        height: 1400px;
+    }
+    .home-container{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .home-text-content{
+        margin-left: 5vw;
+        margin-right: 5vw;
+        width: 350px;
+    
+    }
+
+    .home-img{
+        height: 200px;
+    }
+    .home-img-content{
+        margin-right: 20px;
+        margin-left: 20px;
+        width: 350px;
+        height: 200px;
+    }
+    
+  } 
 
 /* =============== BASE ===============*/
 *{
     margin:0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: var(--body-font);
+    font-family: 'Poppins' , sans-serif;
 }
-html{
-    scroll-behavior: smooth;
-}
-body,
-button,
-input {
-    font-family: var(--body-color);
-    font-size: var(--normal-font-size);
-}
+html{ scroll-behavior: smooth;}
 body{
     background-color: var(--body-color);
     color: var(--text-color);
@@ -175,7 +188,6 @@ button, input{
 #home{
     background-color: var(--grey-background);
     height: 100vh;
-    /* This sets the background of home page grey with an image. */
 }
 .home-container{
     position: relative;
@@ -196,7 +208,7 @@ button, input{
     margin-left: 5vw;
     width: 40vw;
 }
-.home_img{
+.home-img{
     height: 55vh;
     max-width: 48.5vh;
     border-radius: 5px;
@@ -440,8 +452,8 @@ button, input{
 
 #night-mode, #set-theme, #day-mode{
     background-color: var(--grey-background);
+    filter: invert(.2) ;
     transition: all .75s ease;
-    box-shadow: 3px 3px 5px 3px black;
     height: 3rem;
     width: 3rem;
     border-radius: 5px;
