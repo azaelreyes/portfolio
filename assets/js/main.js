@@ -113,4 +113,19 @@ function toggleThemeMode(){
 dayModeBtn.addEventListener("click", toggleThemeMode);
 nightModeBtn.addEventListener("click", toggleThemeMode);
 
+const contentCorners = document.getElementById("content")
+const testing = document.getElementById("testing");
+
+window.addEventListener("resize", checkForSmallScreen())
+
+function checkForSmallScreen(){
+    if(window.innerWidth <=800){
+        contentCorners.classList.add("hidden")
+        console.log("remove")
+    } else if(window.innerWidth > 800 && contentCorners.classList.contains("hidden")){
+        contentCorners.classList.remove("hidden")
+        console.log("add")
+    }
+}
+
 
