@@ -176,7 +176,9 @@
         visibility: visible !important;
         display: flex !important;
         height: 100vh !important;
-        margin-top: -5vh !important;
+        margin-top: -10vh !important;
+        padding-bottom: 10vh;
+        
     }
     /* .mobile-home-text-container, .mobile-home-img-container{} */
     .mobile-home-text-container{
@@ -186,9 +188,147 @@
         visibility: hidden !important;
         display: none !important;
     }
+    #mobile-menu{
+        display: flex !important;
+        visibility: visible !important;
+    }
+
   } 
   /* END OF MEDIA QUERY ==================================== */
  
+/* ================= ABSOLUTE ITEMS======================================= */
+
+#mobile-menu{
+    background-color: var(--skin-color);
+    height: 3rem;
+    width: 3rem;
+    border-radius: 5px;
+    position: fixed;
+    justify-content: center;
+    left: 3vw;
+    top: 3vh;
+    transition: opacity .5s;
+    visibility: hidden;
+    display: flex;
+    z-index: 101;
+}
+#mobile-menu-navbar{
+    background-color: var(--grey-background);
+    filter: invert(.2) ;
+    height: 100vh;
+    width: 100px;
+    position: fixed;
+    left: 0vw;
+    top: 0vh;
+    z-index: 100;
+    opacity: 0%;
+    transition: opacity .5s;
+
+}
+.mobile-menu-navbar-show{
+    opacity:100% !important;
+    visibility: visible !important;
+
+}
+
+
+#scroll-up{
+    background-color: var(--body-color);
+    backdrop-filter: contrast(40%);
+    height: 3rem;
+    width: 3rem;
+    border-radius: 5px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    right: 2vw;
+    top: 90vh;
+    transition: opacity .5s;
+    z-index: 100;
+}
+.scroll-up-icon, .mobile-menu-icon{
+    color:var(--title-color);
+    font-size: var(--biggest-font-size);
+    line-height: 3rem;
+}
+#scroll-up:hover , #mobile-menu:hover{
+    transform: scale(1.1);
+}
+
+
+#night-mode, #set-theme, #day-mode{
+    background-color: var(--grey-background);
+    filter: invert(.2) ;
+    transition: all .75s ease;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 5px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+}
+.theme-colors{
+    background-color: var(--grey-background);
+    box-shadow: 3px 3px 5px 3px black;
+    height: 3rem;
+    width: 12rem;
+    border-radius: 5px;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    right: 7vw;
+    top: 5vh;
+    transition: opacity .5s;
+
+}
+
+.theme-color{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100px;
+}
+.theme-color:hover{transform: scale(1.1)}
+.red-theme{ background-color:  hsl(342, 92%, 46%);}
+.green-theme{ background-color: hsl(72, 81%, 43%);}
+.cyan-theme{ background-color: rgb(0, 157, 171);}
+.blue-theme{ background-color: rgb(0, 60, 199);}
+.orange-theme{ background-color:rgb(229, 95, 23);}
+
+
+#set-theme{
+    right: 2vw;
+    top: 5vh;
+}
+
+#set-theme:hover{
+    transform: scale(1.1) ;
+
+}
+#night-mode, #day-mode{
+    right: 2vw;
+    top: 13vh;
+    
+}
+
+.theme-icon, .night-icon, .day-icon{
+    color:var(--title-color);
+    font-size: var(--biggest-font-size);
+    line-height: 3rem;
+    transform: rotate(40deg);
+}
+
+.hidden{
+    opacity: 0%;
+    transform: translateX(0) rotate(0deg);  
+
+}
+/* END OF ABSOLUTES */
+
+
+
+
 
 #desktop-social{visibility: visible;}
 #desktop-email{visibility: visible;}
@@ -572,96 +712,4 @@ button, input{
 .contact-link{
     font-size: var(--biggest-font-size);
     color:var(--skin-color)
-}
-/* ================= ABSOLUTE ITEMS======================================= */
-#scroll-up{
-    background-color: var(--skin-color);
-    height: 3rem;
-    width: 3rem;
-    border-radius: 5px;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    right: 2vw;
-    top: 90vh;
-    transition: opacity .5s;
-   
-}
-.scroll-up-icon{
-    color:var(--title-color);
-    font-size: var(--biggest-font-size);
-    line-height: 3rem;
-}
-#scroll-up:hover{
-    transform: scale(1.1);
-}
-
-
-#night-mode, #set-theme, #day-mode{
-    background-color: var(--grey-background);
-    filter: invert(.2) ;
-    transition: all .75s ease;
-    height: 3rem;
-    width: 3rem;
-    border-radius: 5px;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-}
-.theme-colors{
-    background-color: var(--grey-background);
-    box-shadow: 3px 3px 5px 3px black;
-    height: 3rem;
-    width: 12rem;
-    border-radius: 5px;
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    right: 7vw;
-    top: 5vh;
-    transition: opacity .5s;
-
-}
-
-.theme-color{
-    height: 2rem;
-    width: 2rem;
-    border-radius: 100px;
-}
-.theme-color:hover{transform: scale(1.1)}
-.red-theme{ background-color:  hsl(342, 92%, 46%);}
-.green-theme{ background-color: hsl(72, 81%, 43%);}
-.cyan-theme{ background-color: rgb(0, 157, 171);}
-.blue-theme{ background-color: rgb(0, 60, 199);}
-.orange-theme{ background-color:rgb(229, 95, 23);}
-
-
-#set-theme{
-    right: 2vw;
-    top: 5vh;
-}
-
-#set-theme:hover{
-    transform: scale(1.1) ;
-
-}
-#night-mode, #day-mode{
-    right: 2vw;
-    top: 13vh;
-    
-}
-
-.theme-icon, .night-icon, .day-icon{
-    color:var(--title-color);
-    font-size: var(--biggest-font-size);
-    line-height: 3rem;
-    transform: rotate(40deg);
-}
-
-.hidden{
-    opacity: 0%;
-    transform: translateX(0) rotate(0deg);  
-
 }

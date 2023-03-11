@@ -113,3 +113,14 @@ function toggleThemeMode(){
 dayModeBtn.addEventListener("click", toggleThemeMode);
 nightModeBtn.addEventListener("click", toggleThemeMode);
 
+const mobileMenu = document.getElementById("mobile-menu");
+const mobileMenuNavBar = document.getElementById("mobile-menu-navbar");
+mobileMenu.addEventListener("click", ()=>{
+    console.log("Mobile Menu Clicked");
+    if(mobileMenuNavBar.classList.contains("mobile-menu-navbar-show")){
+        mobileMenuNavBar.classList.remove("mobile-menu-navbar-show");
+    }else{
+        mobileMenuNavBar.classList.add("mobile-menu-navbar-show");
+
+    }
+});
