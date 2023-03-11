@@ -119,8 +119,31 @@ mobileMenu.addEventListener("click", ()=>{
     console.log("Mobile Menu Clicked");
     if(mobileMenuNavBar.classList.contains("mobile-menu-navbar-show")){
         mobileMenuNavBar.classList.remove("mobile-menu-navbar-show");
+        setTheme.style.visibility = "hidden";
+        if(nightModeCheck){
+            nightModeBtn.classList.add("hidden");
+            dayModeBtn.classList.add("hidden");    
+            nightModeBtn.style.visibility = "hidden";
+    
+        } else {
+            dayModeBtn.classList.add("hidden");
+            nightModeBtn.classList.add("hidden");    
+            nightModeBtn.style.visibility = "hidden";
+       
+        }
+
     }else{
         mobileMenuNavBar.classList.add("mobile-menu-navbar-show");
-
+        setTheme.style.visibility = "visible";
+        if(nightModeCheck){
+            nightModeBtn.classList.remove("hidden");
+            nightModeBtn.style.visibility = "visible";
+            dayModeBtn.classList.add("hidden");        
+        } else {
+            dayModeBtn.classList.remove("hidden");
+            nightModeBtn.classList.add("hidden");     
+            dayModeBtn.style.visibility = "visible";
+      
+        }
     }
 });

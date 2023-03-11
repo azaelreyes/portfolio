@@ -140,16 +140,26 @@
     }
 
     #set-theme{
-        right: 6vw !important;
-        top: 3vh !important;
+        left: 3vw !important;
+        top: 8vh !important;        
+        visibility: hidden ;
+        z-index: 200;
+        background-color: var(--skin-color) !important;
+
+
     }
     #night-mode, #day-mode{
-        right: 6vw !important;
-        top: 10vh !important; 
+        left: 3vw !important;
+        top: 12vh !important; 
+        visibility: hidden ;
+        background-color: var(--skin-color) !important;
+        z-index: 200;
+
     }
     #scroll-up {
         top: 90vh !important;
         right: 6vw !important;
+        
     }
     .home-email{
         justify-content: center;
@@ -165,7 +175,7 @@
     #desktop-social{visibility: hidden !important;}
     #desktop-email{visibility: hidden !important;}
     .theme-colors{
-        right: 20vw !important;
+        left: 10vw !important;
         top: 3vh !important;
     }
 
@@ -286,7 +296,7 @@
 #night-mode, #set-theme, #day-mode{
     background-color: var(--grey-background);
     filter: invert(.2) ;
-    transition: all .75s ease;
+    transition: opacity 1s;
     height: 3rem;
     width: 3rem;
     border-radius: 5px;
@@ -416,6 +426,20 @@ button, input{
     color: var(--title-color);
     font-weight: var(--font-bold);
     line-height: 40px;
+}
+
+.nav-menu-mobile{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50vh;
+}
+.nav-list-mobile{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    transition: .4s;
 }
 
 .nav-menu{
