@@ -144,13 +144,14 @@
         top: 10vh !important; 
     }
     #scroll-up {
-        top: 95vh;
+        top: 90vh !important;
+        right: 6vw !important;
     }
     .home-email{
         justify-content: center;
     }
 
-    .scroll-up-icon
+    
     #mobile-social{
         margin-bottom: 1vh;
         visibility: visible !important;
@@ -171,7 +172,16 @@
         font-size: 2rem !important;
 
     }
-    .mobile-home-container{visibility: visible !important;}
+    .mobile-home-container{
+        visibility: visible !important;
+        display: flex !important;
+        height: 100vh !important;
+        margin-top: -5vh !important;
+    }
+    /* .mobile-home-text-container, .mobile-home-img-container{} */
+    .mobile-home-text-container{
+        margin-top: -20vh !important;
+    }
     .home-container{
         visibility: hidden !important;
         display: none !important;
