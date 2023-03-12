@@ -140,25 +140,25 @@
     }
 
     #set-theme{
-        left: 3vw !important;
-        top: 8vh !important;        
+        left: 5vw !important;
+        top: 12vh !important;        
         visibility: hidden ;
         z-index: 200;
         background-color: var(--skin-color) !important;
-
-
+        filter: none !important ;
     }
     #night-mode, #day-mode{
-        left: 3vw !important;
-        top: 12vh !important; 
+        left: 5vw !important;
+        top: 21vh !important; 
         visibility: hidden ;
         background-color: var(--skin-color) !important;
         z-index: 200;
+        filter: none !important;
 
     }
     #scroll-up {
-        top: 90vh !important;
-        right: 6vw !important;
+        top: 85vh !important;
+        right: 8vw !important;
         
     }
     .home-email{
@@ -175,8 +175,9 @@
     #desktop-social{visibility: hidden !important;}
     #desktop-email{visibility: hidden !important;}
     .theme-colors{
-        left: 10vw !important;
-        top: 3vh !important;
+        left: 21vw !important;
+        top: 12vh !important;
+        z-index: 150;
     }
 
     .mobile-home-container{
@@ -215,10 +216,15 @@
         margin-top: -5vh;
     }
 
+
   } 
   /* END OF MEDIA QUERY ==================================== */
 
 
+  .active-link-mobile{
+    color: var(--skin-color) !important;
+    transform: scale(1.1) !important;
+}
   #library-mobile-title, #ttt-mobile-title, #todo-mobile-title{
     visibility: hidden;
     display: none;
@@ -243,7 +249,7 @@
     border-radius: 5px;
     position: fixed;
     justify-content: center;
-    left: 3vw;
+    left: 5vw;
     top: 3vh;
     transition: opacity .5s;
     visibility: hidden;
@@ -296,7 +302,7 @@
 #night-mode, #set-theme, #day-mode{
     background-color: var(--grey-background);
     filter: invert(.2) ;
-    transition: opacity 1s;
+    transition: opacity .5s;
     height: 3rem;
     width: 3rem;
     border-radius: 5px;
@@ -433,13 +439,25 @@ button, input{
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 50vh;
+    display: flex;
+    height: 90vh;
+
 }
 .nav-list-mobile{
     display: flex;
     justify-content: center;
     flex-direction: column;
     transition: .4s;
+}
+
+.nav-link-mobile{
+    height: 100%;
+    line-height: 50px;
+    padding: 0 1rem;
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    position: relative;
+    width: 50px;
 }
 
 .nav-menu{
@@ -491,7 +509,6 @@ button, input{
     left: 0;
     right: 0;
     margin: auto;
-
 }
 /* ==================== ⬇️ MAIN ⬇️  ==================== */
 .main{
